@@ -89,7 +89,7 @@ class LLM_Kyrgyz_Insta(Scene):
         title2   = tx("Текст → Токендер", size=0.50, color=BLUE_1).to_edge(UP, buff=0.6)
         sentence = tx('"Мен үйгө барам"',  size=0.52, color=GREY_1).shift(UP * 3.0)
 
-        self.play(FadeIn(title2, shift=DOWN * 0.15))
+        self.play(FadeIn(title2, shift=DOWN * 0.20))
         self.play(FadeIn(sentence, shift=DOWN * 0.2))
         self.wait(0.3)
 
@@ -125,7 +125,7 @@ class LLM_Kyrgyz_Insta(Scene):
         # SCENE 3 · Neural network  (14–25 s)
         # ─────────────────────────────────────────────────────────────────────
         title3 = tx("Нейрондук Тармак", size=0.50, color=BLUE_1).to_edge(UP, buff=0.6)
-        self.play(FadeIn(title3, shift=DOWN * 0.15))
+        self.play(FadeIn(title3, shift=DOWN * 0.10))
 
         layers, edges = make_network([3, 5, 5, 3])
         lnames = ["Киргизуу", "Жашырын", "Жашырын", "Чыгаруу"]
@@ -153,7 +153,7 @@ class LLM_Kyrgyz_Insta(Scene):
         # SCENE 4 · Next-token prediction  (25–36 s)
         # ─────────────────────────────────────────────────────────────────────
         title4 = tx("Кийинки Сөздү Болжолдойт", size=0.42, color=BLUE_1).to_edge(UP, buff=0.6)
-        self.play(FadeIn(title4, shift=DOWN * 0.15))
+        self.play(FadeIn(title4, shift=DOWN * 0.10))
 
         prompt_words  = ["Мен", "китеп", "___"]
         prompt_colors = [BLUE_1, TEAL, GREY_2]
@@ -205,7 +205,7 @@ class LLM_Kyrgyz_Insta(Scene):
         # SCENE 5 · Training  (36–46 s)
         # ─────────────────────────────────────────────────────────────────────
         title5 = tx("Кантип үйрөнөт?", size=0.50, color=BLUE_1).to_edge(UP, buff=0.6)
-        self.play(FadeIn(title5, shift=DOWN * 0.15))
+        self.play(FadeIn(title5, shift=DOWN * 0.10))
 
         # Icon squares instead of emoji (more reliable rendering)
         def icon_box(label_text, icon_color, pos):

@@ -22,7 +22,8 @@ config.pixel_width  = 1080
 config.pixel_height = 1920
 config.frame_width  = 9
 config.frame_height = 16
-
+SAFE_TOP = 5.3
+SAFE_BOTTOM = -6.5
 
 def tx(text, size=0.45, color=WHITE, **kw):
     return Text(
@@ -97,7 +98,7 @@ class Attention_Kyrgyz(Scene):
             "Мисалы",
             size=0.50,
             color=BLUE_1
-        ).to_edge(UP, buff=0.6)
+        ).move_to([0, SAFE_TOP, 0])
 
         words = [
             ("Мен", BLUE_1),
@@ -180,7 +181,7 @@ class Attention_Kyrgyz(Scene):
             "Attention Matrix",
             size=0.55,
             color=BLUE_1
-        ).to_edge(UP, buff=0.6)
+        ).move_to([0, SAFE_TOP, 0])
 
         self.play(FadeIn(title3))
 
@@ -243,7 +244,7 @@ class Attention_Kyrgyz(Scene):
             "Multi-Head Attention",
             size=0.55,
             color=BLUE_1
-        ).to_edge(UP, buff=0.6)
+        ).move_to([0, SAFE_TOP, 0])
 
         self.play(FadeIn(title4))
 
